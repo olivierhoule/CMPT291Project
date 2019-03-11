@@ -51,19 +51,19 @@
             this.tabControl1.Controls.Add(this.tabRegistration);
             this.tabControl1.Controls.Add(this.tabConfiguration);
             this.tabControl1.Location = new System.Drawing.Point(10, 10);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1504, 823);
+            this.tabControl1.Size = new System.Drawing.Size(1467, 779);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPatients
             // 
             this.tabPatients.Location = new System.Drawing.Point(8, 39);
-            this.tabPatients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPatients.Margin = new System.Windows.Forms.Padding(2);
             this.tabPatients.Name = "tabPatients";
-            this.tabPatients.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPatients.Size = new System.Drawing.Size(1112, 617);
+            this.tabPatients.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPatients.Size = new System.Drawing.Size(1366, 611);
             this.tabPatients.TabIndex = 0;
             this.tabPatients.Text = "Patients";
             this.tabPatients.UseVisualStyleBackColor = true;
@@ -71,10 +71,10 @@
             // tabDoctors
             // 
             this.tabDoctors.Location = new System.Drawing.Point(8, 39);
-            this.tabDoctors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDoctors.Margin = new System.Windows.Forms.Padding(2);
             this.tabDoctors.Name = "tabDoctors";
-            this.tabDoctors.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabDoctors.Size = new System.Drawing.Size(1112, 617);
+            this.tabDoctors.Padding = new System.Windows.Forms.Padding(2);
+            this.tabDoctors.Size = new System.Drawing.Size(1366, 611);
             this.tabDoctors.TabIndex = 1;
             this.tabDoctors.Text = "Doctors";
             this.tabDoctors.UseVisualStyleBackColor = true;
@@ -82,10 +82,10 @@
             // tabWards
             // 
             this.tabWards.Location = new System.Drawing.Point(8, 39);
-            this.tabWards.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabWards.Margin = new System.Windows.Forms.Padding(2);
             this.tabWards.Name = "tabWards";
-            this.tabWards.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabWards.Size = new System.Drawing.Size(1112, 617);
+            this.tabWards.Padding = new System.Windows.Forms.Padding(2);
+            this.tabWards.Size = new System.Drawing.Size(1366, 611);
             this.tabWards.TabIndex = 2;
             this.tabWards.Text = "Wards";
             this.tabWards.UseVisualStyleBackColor = true;
@@ -95,10 +95,10 @@
             this.tabRegistration.Controls.Add(this.buttonRegSubmit);
             this.tabRegistration.Controls.Add(this.buttonRegClear);
             this.tabRegistration.Location = new System.Drawing.Point(8, 39);
-            this.tabRegistration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.tabRegistration.Name = "tabRegistration";
             this.tabRegistration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRegistration.Size = new System.Drawing.Size(1484, 765);
+            this.tabRegistration.Size = new System.Drawing.Size(1451, 732);
             this.tabRegistration.TabIndex = 3;
             this.tabRegistration.Text = "Registration";
             this.tabRegistration.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             // buttonRegSubmit
             // 
             this.buttonRegSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegSubmit.Location = new System.Drawing.Point(1072, 684);
+            this.buttonRegSubmit.Location = new System.Drawing.Point(1139, 666);
             this.buttonRegSubmit.Name = "buttonRegSubmit";
             this.buttonRegSubmit.Size = new System.Drawing.Size(150, 60);
             this.buttonRegSubmit.TabIndex = 1;
@@ -116,7 +116,7 @@
             // buttonRegClear
             // 
             this.buttonRegClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegClear.Location = new System.Drawing.Point(1278, 684);
+            this.buttonRegClear.Location = new System.Drawing.Point(1295, 666);
             this.buttonRegClear.Name = "buttonRegClear";
             this.buttonRegClear.Size = new System.Drawing.Size(150, 60);
             this.buttonRegClear.TabIndex = 0;
@@ -126,10 +126,10 @@
             // tabConfiguration
             // 
             this.tabConfiguration.Location = new System.Drawing.Point(8, 39);
-            this.tabConfiguration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabConfiguration.Margin = new System.Windows.Forms.Padding(2);
             this.tabConfiguration.Name = "tabConfiguration";
-            this.tabConfiguration.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabConfiguration.Size = new System.Drawing.Size(1112, 617);
+            this.tabConfiguration.Padding = new System.Windows.Forms.Padding(2);
+            this.tabConfiguration.Size = new System.Drawing.Size(1366, 611);
             this.tabConfiguration.TabIndex = 4;
             this.tabConfiguration.Text = "Configuration";
             this.tabConfiguration.UseVisualStyleBackColor = true;
@@ -138,9 +138,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 743);
+            this.ClientSize = new System.Drawing.Size(1488, 800);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Hospital App";
             this.tabControl1.ResumeLayout(false);
