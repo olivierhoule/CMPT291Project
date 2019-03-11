@@ -53,7 +53,7 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1504, 823);
+            this.tabControl1.Size = new System.Drawing.Size(1504, 896);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPatients
@@ -93,7 +93,7 @@
             this.tabRegistration.Location = new System.Drawing.Point(10, 48);
             this.tabRegistration.Name = "tabRegistration";
             this.tabRegistration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRegistration.Size = new System.Drawing.Size(1484, 765);
+            this.tabRegistration.Size = new System.Drawing.Size(1484, 838);
             this.tabRegistration.TabIndex = 3;
             this.tabRegistration.Text = "Registration";
             this.tabRegistration.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             // buttonRegSubmit
             // 
             this.buttonRegSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegSubmit.Location = new System.Drawing.Point(1072, 684);
+            this.buttonRegSubmit.Location = new System.Drawing.Point(1072, 757);
             this.buttonRegSubmit.Name = "buttonRegSubmit";
             this.buttonRegSubmit.Size = new System.Drawing.Size(200, 75);
             this.buttonRegSubmit.TabIndex = 1;
@@ -111,7 +111,7 @@
             // buttonRegClear
             // 
             this.buttonRegClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegClear.Location = new System.Drawing.Point(1278, 684);
+            this.buttonRegClear.Location = new System.Drawing.Point(1278, 757);
             this.buttonRegClear.Name = "buttonRegClear";
             this.buttonRegClear.Size = new System.Drawing.Size(200, 75);
             this.buttonRegClear.TabIndex = 0;
