@@ -16,5 +16,12 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cmpt_291_ProjectDataSet1.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.cmpt_291_ProjectDataSet1.Patients);
+
+        }
     }
 }
