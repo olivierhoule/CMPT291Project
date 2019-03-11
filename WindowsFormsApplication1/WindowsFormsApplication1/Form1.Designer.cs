@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPatients = new System.Windows.Forms.TabPage();
             this.tabDoctors = new System.Windows.Forms.TabPage();
@@ -36,6 +37,7 @@
             this.buttonRegSubmit = new System.Windows.Forms.Button();
             this.buttonRegClear = new System.Windows.Forms.Button();
             this.tabConfiguration = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabRegistration.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1467, 779);
+            this.tabControl1.Size = new System.Drawing.Size(1128, 727);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPatients
@@ -63,7 +65,7 @@
             this.tabPatients.Margin = new System.Windows.Forms.Padding(2);
             this.tabPatients.Name = "tabPatients";
             this.tabPatients.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPatients.Size = new System.Drawing.Size(1366, 611);
+            this.tabPatients.Size = new System.Drawing.Size(1112, 680);
             this.tabPatients.TabIndex = 0;
             this.tabPatients.Text = "Patients";
             this.tabPatients.UseVisualStyleBackColor = true;
@@ -74,7 +76,7 @@
             this.tabDoctors.Margin = new System.Windows.Forms.Padding(2);
             this.tabDoctors.Name = "tabDoctors";
             this.tabDoctors.Padding = new System.Windows.Forms.Padding(2);
-            this.tabDoctors.Size = new System.Drawing.Size(1366, 611);
+            this.tabDoctors.Size = new System.Drawing.Size(1112, 680);
             this.tabDoctors.TabIndex = 1;
             this.tabDoctors.Text = "Doctors";
             this.tabDoctors.UseVisualStyleBackColor = true;
@@ -85,20 +87,21 @@
             this.tabWards.Margin = new System.Windows.Forms.Padding(2);
             this.tabWards.Name = "tabWards";
             this.tabWards.Padding = new System.Windows.Forms.Padding(2);
-            this.tabWards.Size = new System.Drawing.Size(1366, 611);
+            this.tabWards.Size = new System.Drawing.Size(1112, 680);
             this.tabWards.TabIndex = 2;
             this.tabWards.Text = "Wards";
             this.tabWards.UseVisualStyleBackColor = true;
             // 
             // tabRegistration
             // 
+            this.tabRegistration.Controls.Add(this.comboBox1);
             this.tabRegistration.Controls.Add(this.buttonRegSubmit);
             this.tabRegistration.Controls.Add(this.buttonRegClear);
             this.tabRegistration.Location = new System.Drawing.Point(8, 39);
             this.tabRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.tabRegistration.Name = "tabRegistration";
-            this.tabRegistration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRegistration.Size = new System.Drawing.Size(1451, 732);
+            this.tabRegistration.Padding = new System.Windows.Forms.Padding(2);
+            this.tabRegistration.Size = new System.Drawing.Size(1112, 680);
             this.tabRegistration.TabIndex = 3;
             this.tabRegistration.Text = "Registration";
             this.tabRegistration.UseVisualStyleBackColor = true;
@@ -106,7 +109,8 @@
             // buttonRegSubmit
             // 
             this.buttonRegSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegSubmit.Location = new System.Drawing.Point(1139, 666);
+            this.buttonRegSubmit.Location = new System.Drawing.Point(804, 616);
+            this.buttonRegSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegSubmit.Name = "buttonRegSubmit";
             this.buttonRegSubmit.Size = new System.Drawing.Size(150, 60);
             this.buttonRegSubmit.TabIndex = 1;
@@ -116,7 +120,8 @@
             // buttonRegClear
             // 
             this.buttonRegClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegClear.Location = new System.Drawing.Point(1295, 666);
+            this.buttonRegClear.Location = new System.Drawing.Point(958, 616);
+            this.buttonRegClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegClear.Name = "buttonRegClear";
             this.buttonRegClear.Size = new System.Drawing.Size(150, 60);
             this.buttonRegClear.TabIndex = 0;
@@ -129,16 +134,24 @@
             this.tabConfiguration.Margin = new System.Windows.Forms.Padding(2);
             this.tabConfiguration.Name = "tabConfiguration";
             this.tabConfiguration.Padding = new System.Windows.Forms.Padding(2);
-            this.tabConfiguration.Size = new System.Drawing.Size(1366, 611);
+            this.tabConfiguration.Size = new System.Drawing.Size(1112, 680);
             this.tabConfiguration.TabIndex = 4;
             this.tabConfiguration.Text = "Configuration";
             this.tabConfiguration.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(448, 186);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(619, 33);
+            this.comboBox1.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1488, 800);
+            this.ClientSize = new System.Drawing.Size(1147, 743);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -159,6 +172,7 @@
         private System.Windows.Forms.TabPage tabConfiguration;
         private System.Windows.Forms.Button buttonRegSubmit;
         private System.Windows.Forms.Button buttonRegClear;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
