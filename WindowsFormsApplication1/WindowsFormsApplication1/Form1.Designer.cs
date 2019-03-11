@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPatients = new System.Windows.Forms.TabPage();
             this.tabDoctors = new System.Windows.Forms.TabPage();
@@ -36,8 +35,7 @@
             this.tabRegistration = new System.Windows.Forms.TabPage();
             this.buttonRegSubmit = new System.Windows.Forms.Button();
             this.buttonRegClear = new System.Windows.Forms.Button();
-            this.tabConfiguration = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabBills = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabRegistration.SuspendLayout();
             this.SuspendLayout();
@@ -50,8 +48,8 @@
             this.tabControl1.Controls.Add(this.tabPatients);
             this.tabControl1.Controls.Add(this.tabDoctors);
             this.tabControl1.Controls.Add(this.tabWards);
+            this.tabControl1.Controls.Add(this.tabBills);
             this.tabControl1.Controls.Add(this.tabRegistration);
-            this.tabControl1.Controls.Add(this.tabConfiguration);
             this.tabControl1.Location = new System.Drawing.Point(10, 10);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -94,7 +92,6 @@
             // 
             // tabRegistration
             // 
-            this.tabRegistration.Controls.Add(this.comboBox1);
             this.tabRegistration.Controls.Add(this.buttonRegSubmit);
             this.tabRegistration.Controls.Add(this.buttonRegClear);
             this.tabRegistration.Location = new System.Drawing.Point(8, 39);
@@ -128,24 +125,14 @@
             this.buttonRegClear.Text = "Clear";
             this.buttonRegClear.UseVisualStyleBackColor = true;
             // 
-            // tabConfiguration
+            // tabBills
             // 
-            this.tabConfiguration.Location = new System.Drawing.Point(8, 39);
-            this.tabConfiguration.Margin = new System.Windows.Forms.Padding(2);
-            this.tabConfiguration.Name = "tabConfiguration";
-            this.tabConfiguration.Padding = new System.Windows.Forms.Padding(2);
-            this.tabConfiguration.Size = new System.Drawing.Size(1112, 680);
-            this.tabConfiguration.TabIndex = 4;
-            this.tabConfiguration.Text = "Configuration";
-            this.tabConfiguration.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(448, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(619, 33);
-            this.comboBox1.TabIndex = 2;
+            this.tabBills.Location = new System.Drawing.Point(8, 39);
+            this.tabBills.Name = "tabBills";
+            this.tabBills.Size = new System.Drawing.Size(1112, 680);
+            this.tabBills.TabIndex = 4;
+            this.tabBills.Text = "Bills";
+            this.tabBills.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -169,10 +156,9 @@
         private System.Windows.Forms.TabPage tabDoctors;
         private System.Windows.Forms.TabPage tabWards;
         private System.Windows.Forms.TabPage tabRegistration;
-        private System.Windows.Forms.TabPage tabConfiguration;
         private System.Windows.Forms.Button buttonRegSubmit;
         private System.Windows.Forms.Button buttonRegClear;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TabPage tabBills;
     }
 }
 
