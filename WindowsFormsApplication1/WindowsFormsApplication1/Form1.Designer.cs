@@ -29,76 +29,76 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPatients = new System.Windows.Forms.TabPage();
+            this.tabDoctors = new System.Windows.Forms.TabPage();
+            this.tabWards = new System.Windows.Forms.TabPage();
+            this.tabRegistration = new System.Windows.Forms.TabPage();
+            this.tabConfiguration = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPatients);
+            this.tabControl1.Controls.Add(this.tabDoctors);
+            this.tabControl1.Controls.Add(this.tabWards);
+            this.tabControl1.Controls.Add(this.tabRegistration);
+            this.tabControl1.Controls.Add(this.tabConfiguration);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1019, 896);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPatients
             // 
-            this.tabPage1.Location = new System.Drawing.Point(10, 48);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(999, 838);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPatients.Location = new System.Drawing.Point(10, 48);
+            this.tabPatients.Name = "tabPatients";
+            this.tabPatients.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPatients.Size = new System.Drawing.Size(999, 838);
+            this.tabPatients.TabIndex = 0;
+            this.tabPatients.Text = "Patients";
+            this.tabPatients.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabDoctors
             // 
-            this.tabPage2.Location = new System.Drawing.Point(10, 48);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(180, 42);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabDoctors.Location = new System.Drawing.Point(10, 48);
+            this.tabDoctors.Name = "tabDoctors";
+            this.tabDoctors.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDoctors.Size = new System.Drawing.Size(999, 838);
+            this.tabDoctors.TabIndex = 1;
+            this.tabDoctors.Text = "Doctors";
+            this.tabDoctors.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabWards
             // 
-            this.tabPage3.Location = new System.Drawing.Point(10, 48);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(999, 838);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabWards.Location = new System.Drawing.Point(10, 48);
+            this.tabWards.Name = "tabWards";
+            this.tabWards.Padding = new System.Windows.Forms.Padding(3);
+            this.tabWards.Size = new System.Drawing.Size(999, 838);
+            this.tabWards.TabIndex = 2;
+            this.tabWards.Text = "Wards";
+            this.tabWards.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // tabRegistration
             // 
-            this.tabPage4.Location = new System.Drawing.Point(10, 48);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(999, 838);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabRegistration.Location = new System.Drawing.Point(10, 48);
+            this.tabRegistration.Name = "tabRegistration";
+            this.tabRegistration.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRegistration.Size = new System.Drawing.Size(999, 838);
+            this.tabRegistration.TabIndex = 3;
+            this.tabRegistration.Text = "Registration";
+            this.tabRegistration.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // tabConfiguration
             // 
-            this.tabPage5.Location = new System.Drawing.Point(10, 48);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(999, 838);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabConfiguration.Location = new System.Drawing.Point(10, 48);
+            this.tabConfiguration.Name = "tabConfiguration";
+            this.tabConfiguration.Padding = new System.Windows.Forms.Padding(3);
+            this.tabConfiguration.Size = new System.Drawing.Size(999, 838);
+            this.tabConfiguration.TabIndex = 4;
+            this.tabConfiguration.Text = "Configuration";
+            this.tabConfiguration.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -107,7 +107,7 @@
             this.ClientSize = new System.Drawing.Size(1044, 921);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Hospital App";
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -116,11 +116,11 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPatients;
+        private System.Windows.Forms.TabPage tabDoctors;
+        private System.Windows.Forms.TabPage tabWards;
+        private System.Windows.Forms.TabPage tabRegistration;
+        private System.Windows.Forms.TabPage tabConfiguration;
     }
 }
 
