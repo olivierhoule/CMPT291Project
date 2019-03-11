@@ -38,17 +38,8 @@
             this.buttonRegClear = new System.Windows.Forms.Button();
             this.tabConfiguration = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmpt_291_ProjectDataSet = new WindowsFormsApplication1.Cmpt_291_ProjectDataSet();
-            this.cmpt291ProjectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmpt_291_ProjectDataSet1 = new WindowsFormsApplication1.Cmpt_291_ProjectDataSet1();
-            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patientsTableAdapter = new WindowsFormsApplication1.Cmpt_291_ProjectDataSet1TableAdapters.PatientsTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabRegistration.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmpt_291_ProjectDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmpt291ProjectDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmpt_291_ProjectDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -150,38 +141,11 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.patientsBindingSource;
-            this.comboBox1.DisplayMember = "firstName";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(448, 186);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(619, 33);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.ValueMember = "PID";
-            // 
-            // cmpt_291_ProjectDataSet
-            // 
-            this.cmpt_291_ProjectDataSet.DataSetName = "Cmpt_291_ProjectDataSet";
-            this.cmpt_291_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cmpt291ProjectDataSetBindingSource
-            // 
-            this.cmpt291ProjectDataSetBindingSource.DataSource = this.cmpt_291_ProjectDataSet;
-            this.cmpt291ProjectDataSetBindingSource.Position = 0;
-            // 
-            // cmpt_291_ProjectDataSet1
-            // 
-            this.cmpt_291_ProjectDataSet1.DataSetName = "Cmpt_291_ProjectDataSet1";
-            this.cmpt_291_ProjectDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientsBindingSource
-            // 
-            this.patientsBindingSource.DataMember = "Patients";
-            this.patientsBindingSource.DataSource = this.cmpt_291_ProjectDataSet1;
-            // 
-            // patientsTableAdapter
-            // 
-            this.patientsTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -192,13 +156,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Hospital App";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabRegistration.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cmpt_291_ProjectDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmpt291ProjectDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmpt_291_ProjectDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,11 +173,6 @@
         private System.Windows.Forms.Button buttonRegSubmit;
         private System.Windows.Forms.Button buttonRegClear;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.BindingSource cmpt291ProjectDataSetBindingSource;
-        private Cmpt_291_ProjectDataSet cmpt_291_ProjectDataSet;
-        private Cmpt_291_ProjectDataSet1 cmpt_291_ProjectDataSet1;
-        private System.Windows.Forms.BindingSource patientsBindingSource;
-        private Cmpt_291_ProjectDataSet1TableAdapters.PatientsTableAdapter patientsTableAdapter;
     }
 }
 
