@@ -328,3 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# connection string
+WindowsFormsApplication1/WindowsFormsApplication1/connectionstring.txt
