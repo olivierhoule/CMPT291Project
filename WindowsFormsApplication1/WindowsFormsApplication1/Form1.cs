@@ -40,6 +40,7 @@ namespace WindowsFormsApplication1
             LoadDoctors();
             LoadWards();
             LoadRegistrations();
+
         }
 
         private void LoadPatients()
