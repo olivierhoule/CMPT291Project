@@ -48,6 +48,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand("SELECT * FROM Patient", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
+            dataGridView4.Rows.Clear();
             while (reader.Read())
             {
                 object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
@@ -60,9 +61,10 @@ namespace WindowsFormsApplication1
 
         private void LoadDoctors()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Doctors", db);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Doctor", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
+            dataGridView4.Rows.Clear();
             while (reader.Read())
             {
                 object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
@@ -75,9 +77,10 @@ namespace WindowsFormsApplication1
 
         private void LoadWards()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Wards", db);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Ward", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
+            dataGridView4.Rows.Clear();
             while (reader.Read())
             {
                 object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
@@ -90,9 +93,10 @@ namespace WindowsFormsApplication1
 
         private void LoadRegistrations()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Registrations", db);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Registration", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
+            dataGridView4.Rows.Clear();
             while (reader.Read())
             {
                 object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
@@ -108,19 +112,10 @@ namespace WindowsFormsApplication1
             db.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonAddPatient_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            PatientWindow window = new WindowsFormsApplication1.PatientWindow();
+            window.ShowDialog();
         }
     }
 }
