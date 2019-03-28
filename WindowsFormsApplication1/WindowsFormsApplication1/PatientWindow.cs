@@ -60,8 +60,8 @@ namespace WindowsFormsApplication1
         {
             firstName = textFirstName.Text;
             lastName = textLastName.Text;
-            dob = dobPicker.Value;
-            gender = genderPicker.SelectedText;
+            dob = PatientDob.Value;
+            gender = genderPickerPatient.SelectedText;
             houseNumberString = textHouseNumber.Text;
             street = textStreet.Text;
             city = textCity.Text;
