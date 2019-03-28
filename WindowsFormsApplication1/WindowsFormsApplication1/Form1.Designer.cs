@@ -35,21 +35,22 @@
             this.columnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDoctors = new System.Windows.Forms.TabPage();
-            this.tabRegistration = new System.Windows.Forms.TabPage();
-            this.buttonRegSubmit = new System.Windows.Forms.Button();
-            this.buttonRegClear = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabWards = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tabRegistration = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.buttonRegSubmit = new System.Windows.Forms.Button();
+            this.buttonRegClear = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPatients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabDoctors.SuspendLayout();
-            this.tabRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabWards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,21 +63,21 @@
             this.tabControl1.Controls.Add(this.tabDoctors);
             this.tabControl1.Controls.Add(this.tabWards);
             this.tabControl1.Controls.Add(this.tabRegistration);
-            this.tabControl1.Location = new System.Drawing.Point(13, 11);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(11, 11);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1504, 901);
+            this.tabControl1.Size = new System.Drawing.Size(1128, 727);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPatients
             // 
             this.tabPatients.Controls.Add(this.dataGridView1);
-            this.tabPatients.Location = new System.Drawing.Point(10, 48);
-            this.tabPatients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPatients.Location = new System.Drawing.Point(8, 39);
+            this.tabPatients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPatients.Name = "tabPatients";
-            this.tabPatients.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPatients.Size = new System.Drawing.Size(1484, 843);
+            this.tabPatients.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPatients.Size = new System.Drawing.Size(1112, 680);
             this.tabPatients.TabIndex = 0;
             this.tabPatients.Text = "Patients";
             this.tabPatients.UseVisualStyleBackColor = true;
@@ -90,12 +91,14 @@
             this.columnID,
             this.columnLastName,
             this.columnFirstName});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(831, 833);
+            this.dataGridView1.Size = new System.Drawing.Size(623, 672);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // columnID
             // 
@@ -118,71 +121,39 @@
             // tabDoctors
             // 
             this.tabDoctors.Controls.Add(this.dataGridView2);
-            this.tabDoctors.Location = new System.Drawing.Point(10, 48);
-            this.tabDoctors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabDoctors.Location = new System.Drawing.Point(8, 39);
+            this.tabDoctors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabDoctors.Name = "tabDoctors";
-            this.tabDoctors.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabDoctors.Size = new System.Drawing.Size(1484, 843);
+            this.tabDoctors.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDoctors.Size = new System.Drawing.Size(1112, 680);
             this.tabDoctors.TabIndex = 1;
             this.tabDoctors.Text = "Doctors";
             this.tabDoctors.UseVisualStyleBackColor = true;
-            // 
-            // tabRegistration
-            // 
-            this.tabRegistration.Controls.Add(this.dataGridView4);
-            this.tabRegistration.Controls.Add(this.buttonRegSubmit);
-            this.tabRegistration.Controls.Add(this.buttonRegClear);
-            this.tabRegistration.Location = new System.Drawing.Point(10, 48);
-            this.tabRegistration.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabRegistration.Name = "tabRegistration";
-            this.tabRegistration.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabRegistration.Size = new System.Drawing.Size(1484, 843);
-            this.tabRegistration.TabIndex = 3;
-            this.tabRegistration.Text = "Registration";
-            this.tabRegistration.UseVisualStyleBackColor = true;
-            // 
-            // buttonRegSubmit
-            // 
-            this.buttonRegSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegSubmit.Location = new System.Drawing.Point(1072, 764);
-            this.buttonRegSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonRegSubmit.Name = "buttonRegSubmit";
-            this.buttonRegSubmit.Size = new System.Drawing.Size(200, 74);
-            this.buttonRegSubmit.TabIndex = 1;
-            this.buttonRegSubmit.Text = "Submit";
-            this.buttonRegSubmit.UseVisualStyleBackColor = true;
-            // 
-            // buttonRegClear
-            // 
-            this.buttonRegClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegClear.Location = new System.Drawing.Point(1277, 764);
-            this.buttonRegClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonRegClear.Name = "buttonRegClear";
-            this.buttonRegClear.Size = new System.Drawing.Size(200, 74);
-            this.buttonRegClear.TabIndex = 0;
-            this.buttonRegClear.Text = "Clear";
-            this.buttonRegClear.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(211, 113);
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.dataGridView2.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 40;
-            this.dataGridView2.Size = new System.Drawing.Size(608, 440);
+            this.dataGridView2.Size = new System.Drawing.Size(623, 672);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // tabWards
             // 
             this.tabWards.Controls.Add(this.dataGridView3);
-            this.tabWards.Location = new System.Drawing.Point(10, 48);
-            this.tabWards.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabWards.Location = new System.Drawing.Point(8, 39);
+            this.tabWards.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabWards.Name = "tabWards";
-            this.tabWards.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabWards.Size = new System.Drawing.Size(1484, 843);
+            this.tabWards.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabWards.Size = new System.Drawing.Size(1112, 680);
             this.tabWards.TabIndex = 2;
             this.tabWards.Text = "Wards";
             this.tabWards.UseVisualStyleBackColor = true;
@@ -190,28 +161,73 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(213, 141);
+            this.dataGridView3.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 40;
-            this.dataGridView3.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView3.Size = new System.Drawing.Size(623, 672);
             this.dataGridView3.TabIndex = 0;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // tabRegistration
+            // 
+            this.tabRegistration.Controls.Add(this.dataGridView4);
+            this.tabRegistration.Controls.Add(this.buttonRegSubmit);
+            this.tabRegistration.Controls.Add(this.buttonRegClear);
+            this.tabRegistration.Location = new System.Drawing.Point(8, 39);
+            this.tabRegistration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRegistration.Name = "tabRegistration";
+            this.tabRegistration.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRegistration.Size = new System.Drawing.Size(1112, 680);
+            this.tabRegistration.TabIndex = 3;
+            this.tabRegistration.Text = "Registration";
+            this.tabRegistration.UseVisualStyleBackColor = true;
             // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(211, 136);
+            this.dataGridView4.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowTemplate.Height = 40;
-            this.dataGridView4.Size = new System.Drawing.Size(512, 321);
+            this.dataGridView4.Size = new System.Drawing.Size(623, 672);
             this.dataGridView4.TabIndex = 2;
+            // 
+            // buttonRegSubmit
+            // 
+            this.buttonRegSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRegSubmit.Location = new System.Drawing.Point(804, 616);
+            this.buttonRegSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRegSubmit.Name = "buttonRegSubmit";
+            this.buttonRegSubmit.Size = new System.Drawing.Size(150, 60);
+            this.buttonRegSubmit.TabIndex = 1;
+            this.buttonRegSubmit.Text = "Submit";
+            this.buttonRegSubmit.UseVisualStyleBackColor = true;
+            // 
+            // buttonRegClear
+            // 
+            this.buttonRegClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRegClear.Location = new System.Drawing.Point(958, 616);
+            this.buttonRegClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRegClear.Name = "buttonRegClear";
+            this.buttonRegClear.Size = new System.Drawing.Size(150, 60);
+            this.buttonRegClear.TabIndex = 0;
+            this.buttonRegClear.Text = "Clear";
+            this.buttonRegClear.UseVisualStyleBackColor = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1529, 921);
+            this.ClientSize = new System.Drawing.Size(1147, 743);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Hospital App";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -219,10 +235,10 @@
             this.tabPatients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabDoctors.ResumeLayout(false);
-            this.tabRegistration.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabWards.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabRegistration.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
@@ -244,6 +260,7 @@
         private System.Windows.Forms.TabPage tabWards;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
 

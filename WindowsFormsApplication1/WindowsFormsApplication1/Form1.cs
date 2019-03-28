@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
 
         private void LoadPatients()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Patients", db);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Patient", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -105,6 +105,21 @@ namespace WindowsFormsApplication1
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             db.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
