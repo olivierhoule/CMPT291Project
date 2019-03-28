@@ -12,15 +12,15 @@ namespace WindowsFormsApplication1
 {
     public partial class PatientWindow : Form
     {
-        public static string firstName;
-        public static string lastName;
-        public static DateTime dob;
-        public static string gender;
-        public static int houseNumber;
-        public static string street;
-        public static string city;
-        public static string postalCode;
-        public static string province;
+        public string firstName;
+        public string lastName;
+        public DateTime dob;
+        public string gender;
+        public int houseNumber;
+        public string street;
+        public string city;
+        public string postalCode;
+        public string province;
 
         private string errorMessage;
         private string houseNumberString;
@@ -33,23 +33,63 @@ namespace WindowsFormsApplication1
         private Boolean validateInputs()
         {
             if (firstName.Length > 50 ||
-                firstName.Length == 0 ||
-                lastName.Length > 50 ||
-                lastName.Length == 0 || 
-                DateTime.Now - dob < TimeSpan.Zero ||
-                gender == null ||
-                gender.Length == 0 ||
-                !Int32.TryParse(houseNumberString, out houseNumber) ||
-                street.Length > 50 ||
-                street.Length == 0 ||
-                city.Length > 50 ||
-                city.Length == 0 ||
-                postalCode.Length > 6 ||
-                postalCode.Length == 0 ||
-                province == null ||
+                firstName.Length == 0)
+            {
+                errorMessage = "Error with first name";
+                return false;
+            }
+            
+            if (lastName.Length > 50 ||
+                lastName.Length == 0)
+            {
+                errorMessage = "Error with last name";
+                return false;
+            }
+
+            if (DateTime.Now - dob < TimeSpan.Zero)
+            {
+                errorMessage = "Error with date of birth";
+                return false;
+            }
+
+            if (gender == null ||
+                gender.Length == 0)
+            {
+                errorMessage = "Error with gender";
+                return false;
+            }
+
+            if (!Int32.TryParse(houseNumberString, out houseNumber))
+            {
+                errorMessage = "Error with house number";
+                return false;
+            }
+
+            if (street.Length > 50 ||
+                street.Length == 0)
+            {
+                errorMessage = "Error with street";
+                return false;
+            }
+
+            if (city.Length > 50 ||
+                city.Length == 0)
+            {
+                errorMessage = "Error with city";
+                return false;
+            }
+
+            if (postalCode.Length > 6 ||
+                postalCode.Length == 0)
+            {
+                errorMessage = "Error with postal code";
+                return false;
+            }
+
+            if (province == null ||
                 province.Length == 0)
             {
-                errorMessage = "Please fill all fields properly.";
+                errorMessage = "Error with province";
                 return false;
             }
 
@@ -61,12 +101,12 @@ namespace WindowsFormsApplication1
             firstName = textFirstName.Text;
             lastName = textLastName.Text;
             dob = dobPicker.Value;
-            gender = genderPicker.SelectedText;
+            gender = genderPicker.Text;
             houseNumberString = textHouseNumber.Text;
             street = textStreet.Text;
             city = textCity.Text;
             postalCode = textPostalCode.Text.Replace(" ", "");
-            province = provincePicker.SelectedText;
+            province = provincePicker.Text;
 
             if (!validateInputs())
             {
@@ -74,6 +114,7 @@ namespace WindowsFormsApplication1
                 return;
             }
 
+            MessageBox.Show("Successfully submitted patient");
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

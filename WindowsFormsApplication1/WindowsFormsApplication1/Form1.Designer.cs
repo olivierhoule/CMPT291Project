@@ -46,9 +46,12 @@
             this.columnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnDOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnPostalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnProvince = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnHouseNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnStreet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPatients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -129,9 +132,12 @@
             this.columnLastName,
             this.columnFirstName,
             this.columnDOB,
+            this.columnGender,
             this.columnPostalCode,
             this.columnCity,
-            this.columnProvince});
+            this.columnProvince,
+            this.columnHouseNumber,
+            this.columnStreet});
             this.dataGridView1.Location = new System.Drawing.Point(6, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -254,6 +260,12 @@
             this.columnDOB.Name = "columnDOB";
             this.columnDOB.ReadOnly = true;
             // 
+            // columnGender
+            // 
+            this.columnGender.HeaderText = "Gender";
+            this.columnGender.Name = "columnGender";
+            this.columnGender.ReadOnly = true;
+            // 
             // columnPostalCode
             // 
             this.columnPostalCode.HeaderText = "Postal Code";
@@ -271,6 +283,18 @@
             this.columnProvince.HeaderText = "Province";
             this.columnProvince.Name = "columnProvince";
             this.columnProvince.ReadOnly = true;
+            // 
+            // columnHouseNumber
+            // 
+            this.columnHouseNumber.HeaderText = "House Number";
+            this.columnHouseNumber.Name = "columnHouseNumber";
+            this.columnHouseNumber.ReadOnly = true;
+            // 
+            // columnStreet
+            // 
+            this.columnStreet.HeaderText = "Street";
+            this.columnStreet.Name = "columnStreet";
+            this.columnStreet.ReadOnly = true;
             // 
             // Form1
             // 
@@ -315,9 +339,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnFirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnDOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnGender;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnPostalCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnCity;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnProvince;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnHouseNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnStreet;
     }
 }
 
