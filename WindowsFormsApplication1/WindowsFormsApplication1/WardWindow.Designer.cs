@@ -33,8 +33,6 @@
             this.wardCapacityText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.wardDate = new System.Windows.Forms.DateTimePicker();
             this.buttonCancelWard = new System.Windows.Forms.Button();
             this.buttonSubmitWard = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -82,27 +80,9 @@
             this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 4;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 119);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Date";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // wardDate
-            // 
-            this.wardDate.Location = new System.Drawing.Point(9, 147);
-            this.wardDate.Name = "wardDate";
-            this.wardDate.Size = new System.Drawing.Size(259, 31);
-            this.wardDate.TabIndex = 6;
-            this.wardDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
             // buttonCancelWard
             // 
-            this.buttonCancelWard.Location = new System.Drawing.Point(307, 214);
+            this.buttonCancelWard.Location = new System.Drawing.Point(307, 116);
             this.buttonCancelWard.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelWard.Name = "buttonCancelWard";
             this.buttonCancelWard.Size = new System.Drawing.Size(152, 60);
@@ -112,7 +92,7 @@
             // 
             // buttonSubmitWard
             // 
-            this.buttonSubmitWard.Location = new System.Drawing.Point(145, 214);
+            this.buttonSubmitWard.Location = new System.Drawing.Point(145, 116);
             this.buttonSubmitWard.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSubmitWard.Name = "buttonSubmitWard";
             this.buttonSubmitWard.Size = new System.Drawing.Size(157, 60);
@@ -124,11 +104,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 285);
+            this.ClientSize = new System.Drawing.Size(471, 193);
             this.Controls.Add(this.buttonCancelWard);
             this.Controls.Add(this.buttonSubmitWard);
-            this.Controls.Add(this.wardDate);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.wardCapacityText);
@@ -149,8 +127,6 @@
         private System.Windows.Forms.TextBox wardCapacityText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker wardDate;
         private System.Windows.Forms.Button buttonCancelWard;
         private System.Windows.Forms.Button buttonSubmitWard;
     }
