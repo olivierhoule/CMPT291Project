@@ -24,10 +24,26 @@ namespace WindowsFormsApplication1
 
         private string errorMessage;
         private string houseNumberString;
+        public bool editMode = false;
 
         public PatientWindow()
         {
             InitializeComponent();
+        }
+
+        public PatientWindow(DataGridViewRow row)
+        {
+            InitializeComponent();
+
+            textFirstName.Text = (string)row.Cells[2].Value;
+            textLastName.Text = (string)row.Cells[1].Value;
+            PatientDob.Value = DateTime.Parse((string)row.Cells[3].Value);
+            genderPickerPatient.SelectedIndex = genderPickerPatient.FindStringExact((string)row.Cells[4].Value);
+            textPostalCode.Text = (string)row.Cells[5].Value;
+            textCity.Text = (string)row.Cells[6].Value;
+            provincePicker.SelectedIndex = provincePicker.FindStringExact((string)row.Cells[7].Value);
+            textHouseNumber.Text = Convert.ToString(row.Cells[8].Value);
+            textStreet.Text = (string)row.Cells[9].Value;
         }
 
         private Boolean validateInputs()
@@ -114,8 +130,13 @@ namespace WindowsFormsApplication1
                 return;
             }
 
-            MessageBox.Show("Successfully submitted patient");
             this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void buttonCancelPatient_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }

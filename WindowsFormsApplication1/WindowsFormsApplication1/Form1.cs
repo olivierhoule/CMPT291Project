@@ -44,10 +44,10 @@ namespace WindowsFormsApplication1
 
         private void LoadPatients()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Patient", db);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Patient ORDER BY pid DESC", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            dataGridView4.Rows.Clear();
+            dataGridView1.Rows.Clear();
             while (reader.Read())
             {
                 object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(1) , ((DateTime)reader.GetValue(8)).ToShortDateString(), reader.GetValue(9),
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand("SELECT * FROM Doctor", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            dataGridView4.Rows.Clear();
+            dataGridView2.Rows.Clear();
             while (reader.Read())
             {
                 object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand("SELECT * FROM Ward", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            dataGridView4.Rows.Clear();
+            dataGridView3.Rows.Clear();
             while (reader.Read())
             {
                 object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
@@ -130,20 +130,62 @@ namespace WindowsFormsApplication1
                 MessageBox.Show((string)reader.GetValue(0));
             }
 
+            MessageBox.Show("Successfully added new patient");
+
             reader.Close();
             cmd.Dispose();
-
             LoadPatients();
         }
 
-        private void DeletePatient(int id)
+        private void DeletePatients(List<int> ids)
         {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = db;
+            cmd.CommandText = String.Format("DELETE FROM Patient WHERE pid IN ({0})", String.Join(", ", ids.ToArray()));
 
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                MessageBox.Show((string)reader.GetValue(0));
+            }
+
+            MessageBox.Show("Successfully deleted patient(s)");
+
+            reader.Close();
+            cmd.Dispose();
+            LoadPatients();
         }
 
-        private void EditPatient(int id, object[] row)
+        private void EditPatient(int id, PatientWindow info)
         {
-            
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = db;
+            cmd.CommandText = "UPDATE Patient SET first_name = @fname, last_name = @lname, house_number = @house, street = @street, city = @city, postal_code = @pcode, province = @prov, date_of_birth = @dob, gender = @gender WHERE pid = @id";
+
+            cmd.Parameters.AddWithValue("@fname", info.firstName);
+            cmd.Parameters.AddWithValue("@lname", info.lastName);
+            cmd.Parameters.AddWithValue("@house", info.houseNumber);
+            cmd.Parameters.AddWithValue("@street", info.street);
+            cmd.Parameters.AddWithValue("@city", info.city);
+            cmd.Parameters.AddWithValue("@pcode", info.postalCode);
+            cmd.Parameters.AddWithValue("@prov", info.province);
+            cmd.Parameters.AddWithValue("@dob", info.dob);
+            cmd.Parameters.AddWithValue("@gender", info.gender);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                MessageBox.Show((string)reader.GetValue(0));
+            }
+
+            MessageBox.Show("Successfully edited patient");
+
+            reader.Close();
+            cmd.Dispose();
+            LoadPatients();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -164,9 +206,41 @@ namespace WindowsFormsApplication1
             window.Dispose();
         }
 
-        private void tabWards_Click(object sender, EventArgs e)
+        private void buttonRemovePatient_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select at least one entire row.");
+                return;
+            }
+            List<int> ids = new List<int>();
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                ids.Add((int)row.Cells[0].Value);
+            }
 
+            DeletePatients(ids);
+        }
+
+
+        private void buttonEditPatient_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select only one row to edit.");
+                return;
+            }
+            DataGridViewRow row = dataGridView1.SelectedRows[0];
+
+            PatientWindow window = new WindowsFormsApplication1.PatientWindow(row);
+            window.ShowDialog();
+
+            if (window.DialogResult == DialogResult.OK)
+            {
+                EditPatient((int)row.Cells[0].Value, window);
+            }
+
+            window.Dispose();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -180,11 +254,6 @@ namespace WindowsFormsApplication1
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPatients_Click(object sender, EventArgs e)
         {
 
         }
