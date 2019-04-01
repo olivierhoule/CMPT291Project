@@ -93,13 +93,13 @@ namespace WindowsFormsApplication1
 
         private void LoadRegistrations()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Registration", db);
+            SqlCommand cmd = new SqlCommand("SELECT R.RID, P.PID, CONCAT(P.last_name, ', ', P.first_name), R.doc_id, CONCAT(D.last_name, ', ', D.first_name), R.ward_id, W.ward_type, R.status, R.doc_notes, R.date FROM Registration R, Patient P, Doctor D, Ward W WHERE R.PID = P.PID AND R.doc_id = D.doc_id AND R.ward_id = W.ward_id", db);
             SqlDataReader reader = cmd.ExecuteReader();
 
             dataGridView4.Rows.Clear();
             while (reader.Read())
             {
-                object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
+                object[] row = { reader.GetValue(0), reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(4), reader.GetValue(5), reader.GetValue(6), reader.GetValue(7), reader.GetValue(8), ((DateTime)reader.GetValue(9)).ToShortDateString() };
                 dataGridView4.Rows.Add(row);
             }
 
@@ -186,6 +186,58 @@ namespace WindowsFormsApplication1
             reader.Close();
             cmd.Dispose();
             LoadPatients();
+        }
+
+        private void AddRegistration(RegistryWindow info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = db;
+            cmd.CommandText = "INSERT INTO Registration VALUES(@pid, @did, @wid, GETDATE(), @notes, @status)";
+
+            cmd.Parameters.AddWithValue("@pid", info.pid);
+            cmd.Parameters.AddWithValue("@did", info.did);
+            cmd.Parameters.AddWithValue("@wid", info.wid);
+            cmd.Parameters.AddWithValue("@notes", info.notes);
+            cmd.Parameters.AddWithValue("@status", info.status);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                MessageBox.Show((string)reader.GetValue(0));
+            }
+
+            MessageBox.Show("Successfully added new registration");
+
+            reader.Close();
+            cmd.Dispose();
+            LoadRegistrations();
+        }
+
+        private void EditRegistration(int id, RegistryWindow info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = db;
+            cmd.CommandText = "UPDATE Patient SET ward_id = @wid, doc_id = @did, status = @status, doc_notes = @notes WHERE rid = @id";
+
+            cmd.Parameters.AddWithValue("@wid", info.wid);
+            cmd.Parameters.AddWithValue("@did", info.did);
+            cmd.Parameters.AddWithValue("@status", info.status);
+            cmd.Parameters.AddWithValue("@notes", info.notes);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                MessageBox.Show((string)reader.GetValue(0));
+            }
+
+            MessageBox.Show("Successfully edited registration");
+
+            reader.Close();
+            cmd.Dispose();
+            LoadRegistrations();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -280,7 +332,35 @@ namespace WindowsFormsApplication1
 
         private void buttonRegSubmit_Click(object sender, EventArgs e)
         {
+            RegistryWindow window = new RegistryWindow();
+            window.ShowDialog();
 
+            if (window.DialogResult == DialogResult.OK)
+            {
+                AddRegistration(window);
+            }
+
+            window.Dispose();
+        }
+
+        private void buttonRegEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridView4.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select only one row to edit.");
+                return;
+            }
+            DataGridViewRow row = dataGridView4.SelectedRows[0];
+
+            RegistryWindow window = new RegistryWindow();
+            window.ShowDialog();
+
+            if (window.DialogResult == DialogResult.OK)
+            {
+                EditRegistration((int)row.Cells[0].Value, window);
+            }
+
+            window.Dispose();
         }
     }
 }

@@ -34,6 +34,8 @@ namespace WindowsFormsApplication1
             wardIdText.Text = Convert.ToString(row.Cells[3].Value);
             textStatus.Text = (string)row.Cells[4].Value;
             docNotesText.Text = (string)row.Cells[5].Value;
+
+            patientIdText.ReadOnly = true;
         }
 
         private bool validateInputs()

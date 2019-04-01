@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-C18JR3B;Initial Catalog=Cmpt_291_Project;Integrated Security=" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Olivier-ASUS;Initial Catalog=Cmpt_291_Project;Integrated Security=" +
             "True")]
         public string Cmpt_291_ProjectConnectionString1 {
             get {
