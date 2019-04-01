@@ -24,7 +24,6 @@ namespace WindowsFormsApplication1
 
         private string errorMessage;
         private string houseNumberString;
-        public bool editMode = false;
 
         public PatientWindow()
         {
