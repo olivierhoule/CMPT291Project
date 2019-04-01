@@ -331,3 +331,7 @@ ASALocalRun/
 
 # connection string
 /WindowsFormsApplication1/connectionstring.txt
+/WindowsFormsApplication1/WindowsFormsApplication1/Cmpt_291_ProjectDataSet.Designer.cs
+/WindowsFormsApplication1/WindowsFormsApplication1/Cmpt_291_ProjectDataSet.xss
+/WindowsFormsApplication1/WindowsFormsApplication1/Cmpt_291_ProjectDataSet.xsd
+/WindowsFormsApplication1/WindowsFormsApplication1/Cmpt_291_ProjectDataSet.xsc
