@@ -172,7 +172,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(1106, 617);
+            this.dataGridView1.Size = new System.Drawing.Size(1101, 617);
             this.dataGridView1.TabIndex = 0;
             // 
             // columnID
@@ -299,7 +299,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 40;
-            this.dataGridView2.Size = new System.Drawing.Size(1106, 619);
+            this.dataGridView2.Size = new System.Drawing.Size(1104, 619);
             this.dataGridView2.TabIndex = 0;
             // 
             // Column11
