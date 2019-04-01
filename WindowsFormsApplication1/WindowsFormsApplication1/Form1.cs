@@ -277,5 +277,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void buttonRegSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
