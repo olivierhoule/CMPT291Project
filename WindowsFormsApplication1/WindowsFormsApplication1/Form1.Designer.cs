@@ -34,28 +34,6 @@
             this.buttonRemovePatient = new System.Windows.Forms.Button();
             this.buttonAddPatient = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabDoctors = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabWards = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tabRegistration = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.buttonRegAdd = new System.Windows.Forms.Button();
-            this.buttonRegEdit = new System.Windows.Forms.Button();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +44,28 @@
             this.columnProvince = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnHouseNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnStreet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabDoctors = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabWards = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabRegistration = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.buttonRegAdd = new System.Windows.Forms.Button();
+            this.buttonRegEdit = new System.Windows.Forms.Button();
             this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +121,7 @@
             // 
             // buttonEditPatient
             // 
+            this.buttonEditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEditPatient.Location = new System.Drawing.Point(928, 627);
             this.buttonEditPatient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEditPatient.Name = "buttonEditPatient";
@@ -132,6 +133,7 @@
             // 
             // buttonRemovePatient
             // 
+            this.buttonRemovePatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemovePatient.Location = new System.Drawing.Point(744, 627);
             this.buttonRemovePatient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemovePatient.Name = "buttonRemovePatient";
@@ -143,6 +145,7 @@
             // 
             // buttonAddPatient
             // 
+            this.buttonAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddPatient.Location = new System.Drawing.Point(560, 627);
             this.buttonAddPatient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddPatient.Name = "buttonAddPatient";
@@ -156,6 +159,10 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnID,
@@ -175,6 +182,87 @@
             this.dataGridView1.Size = new System.Drawing.Size(1101, 617);
             this.dataGridView1.TabIndex = 0;
             // 
+            // columnID
+            // 
+            this.columnID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnID.HeaderText = "ID";
+            this.columnID.MinimumWidth = 20;
+            this.columnID.Name = "columnID";
+            this.columnID.ReadOnly = true;
+            this.columnID.Width = 77;
+            // 
+            // columnLastName
+            // 
+            this.columnLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnLastName.HeaderText = "Last Name";
+            this.columnLastName.Name = "columnLastName";
+            this.columnLastName.ReadOnly = true;
+            this.columnLastName.Width = 148;
+            // 
+            // columnFirstName
+            // 
+            this.columnFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnFirstName.HeaderText = "First Name";
+            this.columnFirstName.Name = "columnFirstName";
+            this.columnFirstName.ReadOnly = true;
+            this.columnFirstName.Width = 149;
+            // 
+            // columnDOB
+            // 
+            this.columnDOB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnDOB.HeaderText = "Date of Birth";
+            this.columnDOB.Name = "columnDOB";
+            this.columnDOB.ReadOnly = true;
+            this.columnDOB.Width = 162;
+            // 
+            // columnGender
+            // 
+            this.columnGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnGender.HeaderText = "Gender";
+            this.columnGender.Name = "columnGender";
+            this.columnGender.ReadOnly = true;
+            this.columnGender.Width = 128;
+            // 
+            // columnPostalCode
+            // 
+            this.columnPostalCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnPostalCode.HeaderText = "Postal Code";
+            this.columnPostalCode.Name = "columnPostalCode";
+            this.columnPostalCode.ReadOnly = true;
+            this.columnPostalCode.Width = 161;
+            // 
+            // columnCity
+            // 
+            this.columnCity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnCity.HeaderText = "City";
+            this.columnCity.Name = "columnCity";
+            this.columnCity.ReadOnly = true;
+            this.columnCity.Width = 94;
+            // 
+            // columnProvince
+            // 
+            this.columnProvince.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnProvince.HeaderText = "Province";
+            this.columnProvince.Name = "columnProvince";
+            this.columnProvince.ReadOnly = true;
+            this.columnProvince.Width = 141;
+            // 
+            // columnHouseNumber
+            // 
+            this.columnHouseNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnHouseNumber.HeaderText = "House Number";
+            this.columnHouseNumber.Name = "columnHouseNumber";
+            this.columnHouseNumber.ReadOnly = true;
+            this.columnHouseNumber.Width = 184;
+            // 
+            // columnStreet
+            // 
+            this.columnStreet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnStreet.HeaderText = "Street";
+            this.columnStreet.Name = "columnStreet";
+            this.columnStreet.ReadOnly = true;
+            this.columnStreet.Width = 114;
+            // 
             // tabDoctors
             // 
             this.tabDoctors.Controls.Add(this.button1);
@@ -192,6 +280,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(928, 627);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -203,6 +292,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(744, 627);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
@@ -214,6 +304,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(560, 627);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
@@ -227,6 +318,9 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column11,
@@ -241,6 +335,41 @@
             this.dataGridView2.Size = new System.Drawing.Size(1104, 619);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column11.HeaderText = "DID";
+            this.Column11.MinimumWidth = 10;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 92;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column12.HeaderText = "Last Name";
+            this.Column12.MinimumWidth = 20;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 160;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column13.HeaderText = "First Name";
+            this.Column13.MinimumWidth = 20;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 161;
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column14.HeaderText = "Date of Birth";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 176;
             // 
             // tabWards
             // 
@@ -259,6 +388,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Location = new System.Drawing.Point(928, 627);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
@@ -270,6 +400,7 @@
             // 
             // button5
             // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Location = new System.Drawing.Point(744, 627);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
@@ -281,6 +412,7 @@
             // 
             // button6
             // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Location = new System.Drawing.Point(560, 627);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
@@ -294,6 +426,9 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column15,
@@ -308,6 +443,39 @@
             this.dataGridView3.Size = new System.Drawing.Size(1104, 619);
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // Column15
+            // 
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column15.HeaderText = "WID";
+            this.Column15.MinimumWidth = 10;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 97;
+            // 
+            // Column16
+            // 
+            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column16.HeaderText = "Type";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 105;
+            // 
+            // Column17
+            // 
+            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column17.HeaderText = "Capacity";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 141;
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column18.HeaderText = "Date";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 102;
             // 
             // tabRegistration
             // 
@@ -327,6 +495,9 @@
             // 
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.column1,
@@ -370,155 +541,6 @@
             this.buttonRegEdit.Text = "Edit Registration";
             this.buttonRegEdit.UseVisualStyleBackColor = true;
             this.buttonRegEdit.Click += new System.EventHandler(this.buttonRegEdit_Click);
-            // 
-            // Column15
-            // 
-            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column15.HeaderText = "WID";
-            this.Column15.MinimumWidth = 10;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Width = 97;
-            // 
-            // Column16
-            // 
-            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column16.HeaderText = "Type";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.Width = 105;
-            // 
-            // Column17
-            // 
-            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column17.HeaderText = "Capacity";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            this.Column17.Width = 141;
-            // 
-            // Column18
-            // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column18.HeaderText = "Date";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Width = 102;
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column11.HeaderText = "DID";
-            this.Column11.MinimumWidth = 10;
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 92;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column12.HeaderText = "Last Name";
-            this.Column12.MinimumWidth = 20;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 160;
-            // 
-            // Column13
-            // 
-            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column13.HeaderText = "First Name";
-            this.Column13.MinimumWidth = 20;
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 161;
-            // 
-            // Column14
-            // 
-            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column14.HeaderText = "Date of Birth";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 176;
-            // 
-            // columnID
-            // 
-            this.columnID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnID.HeaderText = "ID";
-            this.columnID.MinimumWidth = 20;
-            this.columnID.Name = "columnID";
-            this.columnID.ReadOnly = true;
-            this.columnID.Width = 77;
-            // 
-            // columnLastName
-            // 
-            this.columnLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnLastName.HeaderText = "Last Name";
-            this.columnLastName.Name = "columnLastName";
-            this.columnLastName.ReadOnly = true;
-            this.columnLastName.Width = 160;
-            // 
-            // columnFirstName
-            // 
-            this.columnFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnFirstName.HeaderText = "First Name";
-            this.columnFirstName.Name = "columnFirstName";
-            this.columnFirstName.ReadOnly = true;
-            this.columnFirstName.Width = 161;
-            // 
-            // columnDOB
-            // 
-            this.columnDOB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnDOB.HeaderText = "Date of Birth";
-            this.columnDOB.Name = "columnDOB";
-            this.columnDOB.ReadOnly = true;
-            this.columnDOB.Width = 176;
-            // 
-            // columnGender
-            // 
-            this.columnGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnGender.HeaderText = "Gender";
-            this.columnGender.Name = "columnGender";
-            this.columnGender.ReadOnly = true;
-            this.columnGender.Width = 128;
-            // 
-            // columnPostalCode
-            // 
-            this.columnPostalCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnPostalCode.HeaderText = "Postal Code";
-            this.columnPostalCode.Name = "columnPostalCode";
-            this.columnPostalCode.ReadOnly = true;
-            this.columnPostalCode.Width = 174;
-            // 
-            // columnCity
-            // 
-            this.columnCity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnCity.HeaderText = "City";
-            this.columnCity.Name = "columnCity";
-            this.columnCity.ReadOnly = true;
-            this.columnCity.Width = 94;
-            // 
-            // columnProvince
-            // 
-            this.columnProvince.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnProvince.HeaderText = "Province";
-            this.columnProvince.Name = "columnProvince";
-            this.columnProvince.ReadOnly = true;
-            this.columnProvince.Width = 141;
-            // 
-            // columnHouseNumber
-            // 
-            this.columnHouseNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnHouseNumber.HeaderText = "House Number";
-            this.columnHouseNumber.Name = "columnHouseNumber";
-            this.columnHouseNumber.ReadOnly = true;
-            this.columnHouseNumber.Width = 184;
-            // 
-            // columnStreet
-            // 
-            this.columnStreet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnStreet.HeaderText = "Street";
-            this.columnStreet.Name = "columnStreet";
-            this.columnStreet.ReadOnly = true;
-            this.columnStreet.Width = 114;
             // 
             // column1
             // 
@@ -586,10 +608,11 @@
             // 
             // Column9
             // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column9.HeaderText = "Doctor\'s Notes";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Width = 181;
             // 
             // Column10
             // 

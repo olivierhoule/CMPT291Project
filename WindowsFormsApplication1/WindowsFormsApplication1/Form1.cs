@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         private string connectionString;
-        private SqlConnection db;
+        public static SqlConnection db;
 
         public Form1()
         {
@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1
             dataGridView2.Rows.Clear();
             while (reader.Read())
             {
-                object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
+                object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(1), ((DateTime)reader.GetValue(3)).ToShortDateString() };
                 dataGridView2.Rows.Add(row);
             }
 
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
             dataGridView3.Rows.Clear();
             while (reader.Read())
             {
-                object[] row = { reader.GetValue(0), reader.GetValue(2), reader.GetValue(3) };
+                object[] row = { reader.GetValue(0), reader.GetValue(1), reader.GetValue(3), ((DateTime)reader.GetValue(2)).ToShortDateString() };
                 dataGridView3.Rows.Add(row);
             }
 

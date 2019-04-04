@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -72,7 +73,79 @@ namespace WindowsFormsApplication1
                 return false;
             }
 
+            if (!validPID() || !validWID() || !validDID())
+            {
+                errorMessage = "One of the PID, WID or DID are invalid and do not exist";
+                return false;
+            }
+
             return true;
+        }
+
+        private bool validPID()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Form1.db;
+            cmd.CommandText = "SELECT * FROM Patient WHERE pid = @id";
+            
+            cmd.Parameters.AddWithValue("@id", pid);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                reader.Close();
+                cmd.Dispose();
+                return true;
+            }
+
+            reader.Close();
+            cmd.Dispose();
+            return false;
+        }
+
+        private bool validWID()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Form1.db;
+            cmd.CommandText = "SELECT * FROM Ward WHERE ward_id = @id";
+
+            cmd.Parameters.AddWithValue("@id", wid);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                reader.Close();
+                cmd.Dispose();
+                return true;
+            }
+
+            reader.Close();
+            cmd.Dispose();
+            return false;
+        }
+
+        private bool validDID()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Form1.db;
+            cmd.CommandText = "SELECT * FROM Doctor WHERE doc_id = @id";
+
+            cmd.Parameters.AddWithValue("@id", did);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                reader.Close();
+                cmd.Dispose();
+                return true;
+            }
+
+            reader.Close();
+            cmd.Dispose();
+            return false;
         }
 
         private void buttonSubmitRegistry_Click(object sender, EventArgs e)
